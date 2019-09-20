@@ -1,3 +1,35 @@
+# install
+
+npm install file-saver --save  
+npm install xlsx --save 
+npm install bootstrap  
+
+# imports
+# Open the excel-services.service.ts file and add the following code into it.
+
+import { Injectable } from '@angular/core';  
+import * as FileSaver from 'file-saver';  
+import * as XLSX from 'xlsx';  
+const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';  
+const EXCEL_EXTENSION = '.xlsx';  
+
+# Here is the code for app.component.ts.
+import { Component, OnInit } from '@angular/core';  
+import { ExcelServicesService } from './services/excel-services.service';  
+import { HttpClient } from '@angular/common/http';  
+import { Observable } from 'rxjs';  
+
+# Here is the code for app.module.ts.
+import { BrowserModule } from '@angular/platform-browser';    
+import { NgModule } from '@angular/core';    
+import { HttpClientModule } from '@angular/common/http';    
+import { AppRoutingModule } from './app-routing.module';    
+import { AppComponent } from './app.component'; 
+
+
+# genrate service
+ng g service ./services/excel-services 
+
 # AngularDataGenrateExcel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
